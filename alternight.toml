@@ -14,13 +14,20 @@
 
 # "ui.cursorline.primary" = { bg = "test_red" }
 
+"ui.help" = { bg = "dreamware", fg = "darknet" }
+
 "ui.linenr" = "low_signal"
 "ui.linenr.selected" = { fg = "ghost_print" }
 
-# TODO: Update selection bg color
+"ui.menu" = { bg = "darknet_softwired", fg = "ghost_print" }
+"ui.menu.selected" = { bg = "ghost_print", fg = "darknet" }
+
+"ui.popup" = { bg = "darknet_echoed", fg = "ghost_print" }
+
+# OPTIMIZE: Find ideal background color
 "ui.selection" = { fg = "darknet", bg = "low_signal" }
 
-"ui.statusline" = { fg = "ghost_print", bg = "darknet_light" }
+"ui.statusline" = { fg = "ghost_print", bg = "darknet_softwired" }
 "ui.statusline.inactive" = { bg = "#D8959A", fg = "darknet", modifiers = ["bold"] }
 "ui.statusline.insert" = { bg = "tech_hazard", fg = "darknet", modifiers = ["bold"] }
 "ui.statusline.normal" = { bg = "glitch_blossom", fg = "darknet", modifiers = ["bold"] }
@@ -28,27 +35,42 @@
 
 "ui.text" = "ghost_print"
 
-"ui.virtual.indent-guide" = "darknet_hardwired"
+"ui.virtual.indent-guide" = "darknet_softwired"
+
+"ui.window" = { bg = "test_red" }
 
 # TODO: "diagnostic.error" = { fg = "#E85462", bg = "#FADBDE", underline = { color = "#E85462", style = "curl" } }
 
 "diff.minus" = "redshift"
 "diff.plus" = "sys_ready"
 
-error = "synthetic_bleed"
+error = { fg = "#E85462", bg = "#FADBDE", underline = { color = "#E85462", style = "curl" } }
+# error = "synthetic_bleed"
 hint = "coolbit"
 info = "stackwave"
 warning = "solarbyte"
 
 # Syntax
 # TODO: attribute
+
 comment = "low_signal"
+# TODO: "comment.block.documentation"
+
 constant = "solarbyte"
+# TODO: "constant.builtin"
+"constant.character" = "neuroshade"
+"constant.character.escape" = "mintcore"
+# "constant.numeric" = "solarbyte"
+"constant.numeric" = "neon_orchid"
+
+# TODO: constructor
 
 function = "cachelight"
-# TODO: "function.macro" = "TBD"
-"function.builtin" = "cachelight"
+"function.builtin" = { fg = "cachelight", modifiers = ["bold"] }
+# TODO: "function.macro"
+# TODO: "function.special"
 
+# keyword = { fg = "dreamware", modifiers = ["italic"] }
 keyword = "dreamware"
 "keyword.directive" = "dreamware_overclocked"
 
@@ -64,14 +86,18 @@ markup = "dreamware_overclocked"
 namespace = { fg = "dreamware_echoed", modifiers = ["bold"] }
 
 string = "sys_ready"
-"string.regexp" = "cachelight"
-"string.special" = "test_red"
+"string.regexp" = "neon_orchid"
+"string.special" = "sys_ready_echoed"
 
 type = "ambertrace"
-"type.builtin" = "ambertrace_overclocked"
+# TODO: Find alternative
+# "type.builtin" = "ambertrace_overclocked"
+# "type.builtin" = "neon_orchid"
+"type.builtin" = "cyberflare"
 
 variable = "glitch_blossom"
 "variable.builtin" = { fg = "pixelated_petal", modifiers = ["bold"] }
+"variable.other.member" = "stackwave"
 "variable.parameter" = "coolbit"
 
 [palette]
@@ -82,15 +108,17 @@ coldboot = "#3960D0"
 coolbit = "#8ECBD6"
 cyberflare = "#F78C6C"
 darknet = "#1F172B"
-darknet_dark = "#07050A"
-darknet_hardwired = "#2E223F"
-darknet_light = "#37294C"
+darknet_echoed = "#261C35"
+darknet_softwired = "#2E223F"
 dreamware = "#A477BE"
 dreamware_echoed = "#BA97CE"
 dreamware_overclocked = "#8B60A4"
 ghost_print = "#CAAEEB"
 glitch_blossom = "#DF84A2"
 low_signal = "#524168"
+mintcore = "#40CFCF"
+neon_orchid = "#BD4C9F"
+neuroshade = "#5FE09F"
 pixelated_petal = "#E29FA4"
 redshift = "#F07C7C"
 # shell_dust = "#3D3D3D"
@@ -99,6 +127,7 @@ solarbyte = "#F1B718"
 stackwave = "#5C7FE2"
 synthetic_bleed = "#E85462"
 sys_ready = "#4CA779"
+sys_ready_echoed = "#6CBC93"
 tech_hazard = "#D8FC4A"
 
 test_red = "#FF0000"
