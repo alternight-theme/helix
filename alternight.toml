@@ -1,16 +1,19 @@
-# Alternight theme for Helix
+# AlterNight theme for Helix
 # Author: Mauricio Paternina<hi@mau.sh>
 # Upstream: https://github.com/alternight-theme/helix
 # Contributing
 #   Please submit your changes to the upstream above.
-#   The Alternight team will update the repo, including you as a co-author.
+#   I will review them and update the repo, including you as a co-author.
 
 "ui.background" = { bg = "darknet" }
 "ui.background.separator" = { bg = "darknet" }
 
-"ui.cursor" = { bg = "tech_hazard", fg = "darknet", modifiers = ["reversed"] }
-"ui.cursor.match" = { bg = "tech_hazard", fg = "darknet", modifiers = ["bold"] }
-"ui.cursor.primary" = { bg = "tech_hazard", fg = "darknet" }
+"ui.bufferline" = { bg = "darknet_echoed", fg = "ghost_print" }
+"ui.bufferline.active" = { bg = "pixelated_petal", fg = "darknet" }
+
+"ui.cursor" = { bg = "irradiant", fg = "darknet", modifiers = ["reversed"] }
+"ui.cursor.match" = { bg = "irradiant_overclocked", fg = "darknet", modifiers = ["bold"] }
+"ui.cursor.primary" = { bg = "irradiant", fg = "darknet" }
 
 # "ui.cursorline.primary" = { bg = "test_red" }
 
@@ -24,13 +27,12 @@
 
 "ui.popup" = { bg = "darknet_echoed", fg = "ghost_print" }
 
-# OPTIMIZE: Find ideal background color
-"ui.selection" = { fg = "darknet", bg = "low_signal" }
+"ui.selection" = { fg = "darknet", bg = "irradiant_hardwired" }
 
 "ui.statusline" = { fg = "ghost_print", bg = "darknet_softwired" }
 "ui.statusline.inactive" = { bg = "#D8959A", fg = "darknet", modifiers = ["bold"] }
-"ui.statusline.insert" = { bg = "tech_hazard", fg = "darknet", modifiers = ["bold"] }
-"ui.statusline.normal" = { bg = "glitch_blossom", fg = "darknet", modifiers = ["bold"] }
+"ui.statusline.insert" = { bg = "irradiant", fg = "darknet", modifiers = ["bold"] }
+"ui.statusline.normal" = { bg = "pixelated_petal", fg = "darknet", modifiers = ["bold"] }
 "ui.statusline.select" = { bg = "stackwave", fg = "darknet", modifiers = ["bold"] }
 
 "ui.text" = "ghost_print"
@@ -39,31 +41,31 @@
 
 "ui.window" = { bg = "test_red" }
 
-# TODO: "diagnostic.error" = { fg = "#E85462", bg = "#FADBDE", underline = { color = "#E85462", style = "curl" } }
-
-"diff.minus" = "redshift"
-"diff.plus" = "sys_ready"
-
-error = { fg = "#E85462", bg = "#FADBDE", underline = { color = "#E85462", style = "curl" } }
+error = { fg = "synthetic_bleed", bg = "pixelated_petal_softwired", underline = { color = "synthetic_bleed", style = "curl" } }
 # error = "synthetic_bleed"
-hint = "coolbit"
+hint = "mintcore_echoed"
 info = "stackwave"
-warning = "solarbyte"
+warning = "cachelight_hardwired"
 
 # Syntax
-# TODO: attribute
+attribute = { fg = "pixelated_petal_echoed", modifiers = ["italic"] }
 
 comment = "low_signal"
-# TODO: "comment.block.documentation"
 
-constant = "solarbyte"
+constant = "cachelight_hardwired"
 # TODO: "constant.builtin"
-"constant.character" = "neuroshade"
+"constant.character" = "sys_ready_softwired"
 "constant.character.escape" = "mintcore"
-# "constant.numeric" = "solarbyte"
 "constant.numeric" = "neon_orchid"
 
 # TODO: constructor
+
+"diagnostic.deprecated" = { fg = "voidmetal", modifiers = ["crossed_out"] }
+"diagnostic.error" = { fg = "synthetic_bleed", bg = "pixelated_petal_softwired", underline = { color = "synthetic_bleed", style = "curl" } }
+
+"diff.delta" = "mintcore_softwired"
+"diff.minus" = "synthetic_bleed_overclocked"
+"diff.plus" = "sys_ready_softwired"
 
 function = "cachelight"
 "function.builtin" = { fg = "cachelight", modifiers = ["bold"] }
@@ -79,7 +81,7 @@ markup = "dreamware_overclocked"
 "markup.heading" = "pixelated_petal"
 "markup.italic" = { modifiers = ["italic"] }
 "markup.link.text" = "stackwave"
-"markup.link.url" = "coldboot"
+"markup.link.url" = "stackwave_overclocked"
 "markup.quote" = { fg = "pixelated_petal", modifiers = ["italic"] }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
 
@@ -87,7 +89,10 @@ namespace = { fg = "dreamware_echoed", modifiers = ["bold"] }
 
 string = "sys_ready"
 "string.regexp" = "neon_orchid"
+# TODO: Use green from neovim's
 "string.special" = "sys_ready_echoed"
+
+tag = "cyberflare"
 
 type = "ambertrace"
 # TODO: Find alternative
@@ -98,14 +103,13 @@ type = "ambertrace"
 variable = "glitch_blossom"
 "variable.builtin" = { fg = "pixelated_petal", modifiers = ["bold"] }
 "variable.other.member" = "stackwave"
-"variable.parameter" = "coolbit"
+"variable.parameter" = "mintcore_echoed"
 
 [palette]
 ambertrace = "#F0BB6B"
 ambertrace_overclocked = "#EBA63D"
 cachelight = "#E7D5A4"
-coldboot = "#3960D0"
-coolbit = "#8ECBD6"
+cachelight_hardwired = "#F1B718"
 cyberflare = "#F78C6C"
 darknet = "#1F172B"
 darknet_echoed = "#261C35"
@@ -115,19 +119,24 @@ dreamware_echoed = "#BA97CE"
 dreamware_overclocked = "#8B60A4"
 ghost_print = "#CAAEEB"
 glitch_blossom = "#DF84A2"
+irradiant = "#D8FC4A"
+irradiant_hardwired = "#718C02"
+irradiant_overclocked = "#B1DD04"
 low_signal = "#524168"
 mintcore = "#40CFCF"
+mintcore_echoed = "#8ECBD6"
+mintcore_softwired = "#B4DDE4"
 neon_orchid = "#BD4C9F"
-neuroshade = "#5FE09F"
 pixelated_petal = "#E29FA4"
-redshift = "#F07C7C"
-# shell_dust = "#3D3D3D"
-# shell_dust_echoed = "#575757"
-solarbyte = "#F1B718"
+pixelated_petal_echoed = "#E4BABA"
+pixelated_petal_softwired = "#FADBDE"
 stackwave = "#5C7FE2"
+stackwave_overclocked = "#3960D0"
 synthetic_bleed = "#E85462"
+synthetic_bleed_overclocked = "#E64252"
 sys_ready = "#4CA779"
 sys_ready_echoed = "#6CBC93"
-tech_hazard = "#D8FC4A"
+sys_ready_softwired = "#5FE09F"
+voidmetal = "#78767F"
 
 test_red = "#FF0000"
