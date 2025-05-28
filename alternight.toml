@@ -41,11 +41,12 @@
 
 "ui.window" = { bg = "test_red" }
 
-error = { fg = "synthetic_bleed", bg = "pixelated_petal_softwired", underline = { color = "synthetic_bleed", style = "curl" } }
-# error = "synthetic_bleed"
+# OPTIMIZE: Experiment a good solution
+# error = { fg = "synthetic_bleed", bg = "pixelated_petal_softwired", underline = { color = "synthetic_bleed", style = "curl" } }
+error = "synthetic_bleed"
 hint = "mintcore_echoed"
 info = "stackwave"
-warning = "cachelight_hardwired"
+warning = "cyberflare"
 
 # Syntax
 attribute = { fg = "pixelated_petal_echoed", modifiers = ["italic"] }
@@ -53,7 +54,7 @@ attribute = { fg = "pixelated_petal_echoed", modifiers = ["italic"] }
 comment = "low_signal"
 
 constant = "cachelight_hardwired"
-# TODO: "constant.builtin"
+"constant.builtin" = "mintcore"
 "constant.character" = "sys_ready_softwired"
 "constant.character.escape" = "mintcore"
 "constant.numeric" = "neon_orchid"
@@ -61,7 +62,10 @@ constant = "cachelight_hardwired"
 # TODO: constructor
 
 "diagnostic.deprecated" = { fg = "voidmetal", modifiers = ["crossed_out"] }
-"diagnostic.error" = { fg = "synthetic_bleed", bg = "pixelated_petal_softwired", underline = { color = "synthetic_bleed", style = "curl" } }
+"diagnostic.error" = { underline = { color = "synthetic_bleed", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "mintcore_echoed", style = "curl" } }
+"diagnostic.info" = { underline = { color = "stackwave", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "cyberflare", style = "curl" } }
 
 "diff.delta" = "mintcore_softwired"
 "diff.minus" = "synthetic_bleed_overclocked"
